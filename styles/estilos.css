@@ -1,0 +1,190 @@
+/* Seletor para os elementos que não possuem input */
+
+:not(input) {
+    /* Define a cor do cursor de texto como transparente */
+    caret-color: transparent;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(#fff, #f0ffd0, #bcc0d0, #f16767);
+    background-size: 300% 300%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 160px;
+    display: flex;
+    /* Altera para flex em vez de grid */
+    justify-content: space-between;
+    /* Distribui os itens horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* Adiciona quebra de linha para os itens */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Altera para coluna em dispositivos menores */
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+    }
+}
+
+.Artista,
+.Discografia,
+.Agenda,
+.Blog,
+.Contato {
+    margin: 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    /* Ajuste a posição vertical do botão */
+    right: 20px;
+    /* Ajuste a posição horizontal do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+
+/* agora os componentes */
+
+
+/*DISCOGRAfia*/
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* Adicione as propriedades abaixo para lidar com a barra de rolagem */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Adicione uma margem inferior para espaço em dispositivos móveis */
+    margin-bottom: 20px;
+}
+
+.carousel::-webkit-scrollbar {
+    /* Remova a barra de rolagem do WebKit */
+    display: none;
+}
+
+.album {
+    flex-shrink: 0;
+    margin-right: 20px;
+    /* Ajuste a margem entre os álbuns */
+    max-width: 200px;
+    /* Ajuste a largura máxima dos álbuns */
+    width: 100%;
+    /* Altere a largura para 100% para tornar os álbuns responsivos */
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*coisitas mais*/
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-right: 10px;
+    max-height: 40px;
+}
+
+.nav-item:hover {
+    color: #ff0000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title {
+    color: #ffffff;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
